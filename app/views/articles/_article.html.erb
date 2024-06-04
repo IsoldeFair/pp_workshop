@@ -1,0 +1,10 @@
+<div class="mb-4 p-4 border border-gray-200 rounded-lg shadow-lg">
+  <h5 class="text-xl font-semibold"><%= article.title %></h5>
+  <p class="my-2"><%= article.body %></p>
+  <p class="text-sm">Status: <%= article.published ? 'Published' : 'Draft' %></p>
+  <div class="flex space-x-2 mt-2">
+    <%= link_to 'Show', article_path(article), class: "btn bg-blue-300 hover:bg-blue-400 text-white font-bold py-1 px-3 rounded" %>
+    <%= link_to 'Edit', edit_article_path(article), class: "btn bg-green-300 hover:bg-green-400 text-white font-bold py-1 px-3 rounded" %>
+    <%= link_to 'Delete', article_path(article), data: { "turbo-method": :delete, confirm: 'Are you sure?' }, class: "btn bg-red-300 hover:bg-red-400 text-white font-bold py-1 px-3 rounded" %>
+  </div>
+</div>

@@ -1,0 +1,12 @@
+<div class="flex justify-between items-center mb-4">
+  <h1 class="text-3xl font-bold">My Articles Page</h1>
+  <%= link_to 'New Article', new_article_path, class: "btn bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" %>
+</div>
+
+<p style="color: green"><%= notice %></p>
+
+<div>
+  <% @articles.each do |article| %>
+    <%= render partial: "article", locals: { article: article } %>
+  <% end %>
+</div>

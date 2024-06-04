@@ -1,0 +1,10 @@
+<div class="max-w-xl mx-auto mt-5">
+  <h1 class="text-4xl font-bold mb-3"><%= @article.title %></h1>
+  <p class="mb-2 text-gray-800"><%= @article.body %></p>
+  <p class="text-gray-600">Status: <%= @article.published ? 'Published' : 'Draft' %></p>
+
+  <div class="flex space-x-3 mt-4">
+    <%= link_to 'Edit', edit_article_path(@article), class: "btn bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded" %>
+    <%= link_to 'Back to Articles', articles_path, class: "btn bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded" %>
+  </div>
+</div>
